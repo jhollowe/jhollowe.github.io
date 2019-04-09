@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36251750-9"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-36251750-9');
+		</script>
+
+		<title>WSL | John Hollowell</title>
+	</head>
+	<body>
+		<h2 style="margin: 10px 0px 15px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 40px; color: rgb(51, 51, 51); text-rendering: optimizeLegibility; font-size: 31.5px; background-color: rgb(255, 255, 255);">0. What is WSL?</h2>
+		<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><br>
+		WSL stands for "Windows Subsystem for Linux." This addition to Windows (added in Windows 10) allows you to have a linux system (Ubuntu) installed inside of Windows. This Linux system does have some limitations, but all the same basic commands work on it. It is fairly easy to activate and get up-and-running. It allows you to use a commandline experience to SSH into the school computers without having to use other software. It also will allow you to test linux commands and features on your own computer. WSL can even allow you to access your Windows filesystem to save and access file within Windows.<br>
+		You can learn more about WSL at&nbsp;<a href="https://msdn.microsoft.com/en-us/commandline/wsl/about" target="_blank" rel="noreferrer" style="color: rgb(60, 124, 192); text-decoration-line: none; cursor: pointer;">https://msdn.microsoft.com/en-us/commandline/wsl/about</a>&nbsp;or by just googling "WSL Windows 10".
+		</p>
+		<h2 style="margin: 10px 0px 15px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 40px; color: rgb(51, 51, 51); text-rendering: optimizeLegibility; font-size: 31.5px; background-color: rgb(255, 255, 255);">1. Prepare to Install WSL</h2>
+		<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><br>
+		To use WSL, Windows developer mode needs to be turned on. This is easily done through the Windows Settings window.</p>
+		<ol style="padding: 0px; margin: 0px 0px 10px 30px; list-style-position: initial; list-style-image: initial; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">
+			<li style="line-height: 1.3; margin-bottom: 5px;">Open the Settings Window.&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rwl7gm4ss4/vmplayer_20171108_215750.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+			<li style="line-height: 1.3; margin-bottom: 5px;">Select "Update &amp; Security."&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rwno96rtbi/vmplayer_20171108_215841.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+			<li style="line-height: 1.3; margin-bottom: 5px;">Select "Developer Mode."&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rwq8fbb01q/vmplayer_20171108_215908.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+			<li style="line-height: 1.3; margin-bottom: 5px;">Click "Yes."&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rxzb3koa3b/vmplayer_20171108_215947.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+		</ol>
+		<h2 style="margin: 10px 0px 15px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 40px; color: rgb(51, 51, 51); text-rendering: optimizeLegibility; font-size: 31.5px; background-color: rgb(255, 255, 255);">2. Install WSL</h2>
+		<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><br>
+		Once Developer Mode is enabled, the WSL option is enabled to be installed.
+		</p>
+		<ol style="padding: 0px; margin: 0px 0px 10px 30px; list-style-position: initial; list-style-image: initial; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">
+			<li style="line-height: 1.3; margin-bottom: 5px;">Search for and open "Turn Windows Features On or Off".&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rx1jyt55yt/vmplayer_20171108_223023.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+			<li style="line-height: 1.3; margin-bottom: 5px;">Check "Windows Subsystem for Linux" (near the bottom).&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rx8imqy649/vmplayer_20171108_221527.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+			<li style="line-height: 1.3; margin-bottom: 5px;">You will be asked to restart. If you have nothing open, restart. Otherwise, cancel the restart, finish your work, and restart your computer.</li>
+			</ol>
+			<h2 style="margin: 10px 0px 15px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; line-height: 40px; color: rgb(51, 51, 51); text-rendering: optimizeLegibility; font-size: 31.5px; background-color: rgb(255, 255, 255);">3. Finalize</h2>
+			<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><br>
+			Once WSL is installed, you need to put a specific Linux Distribution on it, as well as create a user for the Linux system and update to get the latest features and security updates.<br>
+			After the reboot, search for and run "bash" (this is how you will access WSL from now on.)<br><br>
+			The following steps will differ on what update of Windows 10 you have. Follow the directions under the image that matches what you see.
+			</p>
+			<h3 style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: normal; line-height: 10px; color: rgb(157, 165, 168); text-rendering: optimizeLegibility; font-size: 14px; text-transform: uppercase; display: inline-block; background-color: rgb(255, 255, 255);"><strong>IF YOU SEE THIS TEXT FOLLOW THESE STEPS:</strong></h3>
+			<span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">
+			</span>
+			<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><br><br><br>
+				<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9rxvno09k36/ximg_570998bb8323b.png.pagespeed.gp_jp_jw_pj_ws_js_rj_rp_rw_ri_cp_md.ic.l29bWUELIg1.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;">
+			</p>
+			<ol style="padding: 0px; margin: 0px 0px 10px 30px; list-style-position: initial; list-style-image: initial; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">
+				<li style="line-height: 1.3; margin-bottom: 5px;">when prompted, type "y" to agree to the download and installation of Ubuntu.</li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">Once finished, it will prompt you for a username. Enter a username and hit enter. If you use the same username as your Clemson account, you can SSH into the University computers without specifying the username. You can change the username later if you desire. ("tacocat" was used in this example).</li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">Enter and re-enter a password for this user. As per the insightful CS morals lesson, you should probably not use the same password for this account as your windows or University account.&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9s0k9ls67p0/vmplayer_20171108_234949.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">when a prompt appears type "sudo apt-get update &amp;&amp; sudo apt-get upgrade", hit enter, and enter the password you just created. This may ask if you want to download and install the updates. type "y" and hit enter. This will update all the software for the WSL installation.</li>
+			</ol>
+			<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">WSL should be all setup and ready for use. you can access the storage devices in the /mnt/ folder in the root directory.<br><br><br>
+			</p>
+			<h3 style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: normal; line-height: 10px; color: rgb(157, 165, 168); text-rendering: optimizeLegibility; font-size: 14px; text-transform: uppercase; display: inline-block; background-color: rgb(255, 255, 255);"><strong>IF YOU SEE THIS TEXT FOLLOW THESE STEPS:</strong></h3>
+			<span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">
+			</span>
+			<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);"><br><br><br>
+				<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9ry3gko2afj/vmplayer_20171108_225959.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;">
+			</p>
+			<ol style="padding: 0px; margin: 0px 0px 10px 30px; list-style-position: initial; list-style-image: initial; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">
+				<li style="line-height: 1.3; margin-bottom: 5px;">open the Windows Store and search "WSL"</li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">Click "Get the Apps."&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9ryd0b0dmug/vmplayer_20171108_230659.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">Select "Ubuntu" (Its what the labs use and the most user-friendly OS in the list) and then click "get".</li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">After it is downloaded and ready, click "Launch" to install the OS and prepare it for use.&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9ryrjmlszi/vmplayer_20171108_231831.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">Once finished, it will prompt you for a username. Enter a username and hit enter. If you use the same username as your Clemson account, you can SSH into the University computers without specifying the username. You can change the username later if you desire. ("tacocat" was used in this example).</li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">Enter and re-enter a password for this user. As per the insightful CS morals lesson, you should probably not use the same password for this account as your windows or University account.&nbsp;<img src="https://d1b10bmlvqabco.cloudfront.net/attach/j71vlts6d1n5y4/j71w4075q7u2z3/j9s0k9ls67p0/vmplayer_20171108_234949.png" alt="" style="height: auto; max-width: 100%; vertical-align: middle; border: 0px;"></li>
+				<li style="line-height: 1.3; margin-bottom: 5px;">when a prompt appears type "sudo apt-get update &amp;&amp; sudo apt-get upgrade", hit enter, and enter the password you just created. This may ask if you want to download and install the updates. type "y" and hit enter. This will update all the software for the WSL installation.</li>
+			</ol>
+			<p style="margin: 0px 0px 2px; word-break: break-word; min-height: 15px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255);">WSL should be all setup and ready for use. you can access the storage devices in the /mnt/ folder in the root directory.&nbsp;<br><br><br>
+				<strong><em>If you have any questions, let me know and I will try to answer them the best I can.</em></strong><br><br>
+				<span style="position: relative; font-size: 9.75px; line-height: 0; vertical-align: baseline; bottom: -0.25em;">© John Hollowell</span>
+			</p>
+	</body>
+</html>
