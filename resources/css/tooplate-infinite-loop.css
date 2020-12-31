@@ -206,7 +206,7 @@ blockquote {
 
 .tm-intro-next {
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
   left: 0;
   right: 0;
 }
@@ -229,16 +229,17 @@ blockquote {
 .tm-down-arrow {
   	color: #FFF;
     cursor: pointer;
-    background: #357;
-    padding: 15px 40px;
+    background: #105aa3;
+    padding: 15px 15px;
+    border-radius: 100%;
     transition: all 0.3s ease;
 }
 
 .tm-down-arrow:hover,
 .tm-down-arrow:focus {
   color: #FFF;
-  background: #37A;
-  padding: 20px 50px;
+  background: rgb(61, 135, 192);
+  padding: 20px 20px;
 }
 
 /* Introduction */
