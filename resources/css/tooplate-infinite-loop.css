@@ -232,6 +232,7 @@ blockquote {
     background: #105aa3;
     padding: 15px 15px;
     border-radius: 100%;
+    box-sizing: content-box;
     transition: all 0.3s ease;
 }
 
@@ -240,6 +241,21 @@ blockquote {
   color: #FFF;
   background: rgb(61, 135, 192);
   padding: 20px 20px;
+}
+
+/* until-fa elements are only displayed until FontAwesome has loaded */
+:not(.fontawesome-i2svg-active) .until-fa{
+  display: initial;
+}
+.fontawesome-i2svg-active .until-fa{
+  display: none;
+}
+/* with-fa elements are only displayed when FontAwesome has loaded */
+:not(.fontawesome-i2svg-active) .with-fa{
+  display: none;
+}
+.fontawesome-i2svg-active .with-fa{
+  display: initial;
 }
 
 /* Introduction */
