@@ -311,11 +311,12 @@ https://www.tooplate.com/view/2117-infinite-loop
         </div>
 
         <div class="col-sm-12 col-md-6">
-          <form action="" method="get">
+          <form id="contact-form" action="" method="get" onsubmit="submitContactForm(); return false;">
             <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
-            <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
+            <input id="email" name="_replyto" type="email" placeholder="Your Email" class="tm-input" required />
             <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
             <button type="submit" class="btn tm-btn-submit">Submit</button>
+            <p id="contact-form-response" class="form-response">Thank you</p>
           </form>
         </div>
 

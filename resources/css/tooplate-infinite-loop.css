@@ -576,12 +576,27 @@ figure.effect-honey:hover h2 i {
 	color: #fff;
 	background-color: #369;
 	width: 50%;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 
 .tm-btn-submit:hover {
 	color: #fff;
 	background-color: #38B;
+}
+
+.form-response {
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.response-complete {
+	/* name, time, curve*/
+	animation: fadeOut 5s linear;
+}
+
+.response-error {
+	opacity: 1;
+	color: red;
 }
 
 ::placeholder {
@@ -712,5 +727,66 @@ p {
 
   .tm-gallery-item {
     margin: 0;
+  }
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
   }
 }

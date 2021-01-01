@@ -202,3 +202,29 @@ $(function () {
     ]
   });
 });
+
+
+function submitContactForm(){
+  var thisForm = document.getElementById("contact-form");
+  var responseElem = document.getElementById("contact-form-response");
+  var http = new XMLHttpRequest();
+  http.open("POST", "https://cors-anywhere.herokuapp.com/https://formspree.io/f/xvovvyjb", true);
+  const FD = new FormData(thisForm);
+
+  http.addEventListener("load",
+  function(e) {
+    responseElem.innerText = "Thank You. Your message has been sent"
+    thisForm.reset()
+    responseElem.classList.remove("response-error");
+    responseElem.classList.add("response-complete");
+  });
+
+  http.addEventListener("error",
+  function(e) {
+    responseElem.innerText = "Unable to submit form right now"
+    responseElem.classList.remove("response-complete");
+    responseElem.classList.add("response-error");
+  });
+
+  http.send(FD);
+}
