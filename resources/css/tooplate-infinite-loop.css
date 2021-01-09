@@ -144,7 +144,7 @@ blockquote {
 
 /* Hero */
 
-#infinite {
+#top {
 	background-color: #222;
   background-image: url(../img/infinite-loop-01.jpg);
   background-repeat: no-repeat;
@@ -154,31 +154,31 @@ blockquote {
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {
-  #infinite {
+  #top {
     background-size: cover;
   }
 }
 
 @media (min-height: 830px) {
-  #infinite {
+  #top {
     background-position: center -210px;
   }
 }
 
 @media (min-height: 680px) and (max-height: 829px) {
-  #infinite {
+  #top {
     background-position: center -300px;
   }
 }
 
 @media (min-height: 500px) and (max-height: 679px) {
-  #infinite {
+  #top {
     background-position: center -400px;
   }
 }
 
 @media (max-height: 499px) {
-  #infinite {
+  #top {
     background-position: center -450px;
   }
 }
