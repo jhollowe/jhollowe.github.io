@@ -170,6 +170,8 @@ $(function () {
     infinite: false,
     slidesToShow: 5,
     slidesToScroll: 2,
+    // variableWidth: true,
+    centerMode: false,
     responsive: [
       {
         breakpoint: 1199,
@@ -227,4 +229,7 @@ function submitContactForm(){
   });
 
   http.send(FD);
+
+  // tell the form to not reload the page
+  return false;
 }
