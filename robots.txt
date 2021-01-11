@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /documents/
+Disallow: /resources/img/gallery/
+Disallow: /resources/icons/*.png$
