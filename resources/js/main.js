@@ -215,21 +215,41 @@ function submitContactForm(){
 
   http.addEventListener("load",
   function(e) {
-    responseElem.innerText = "Thank You. Your message has been sent"
-    thisForm.reset()
-    responseElem.classList.remove("response-error");
-    responseElem.classList.add("response-complete");
+    switch (http.status) {
+      case 200:
+        formSuccess(e);
+        break;
+      case 422:
+        formFormatError(e);
+        break;
+      default:
+        formError(e);
+    }
   });
 
-  http.addEventListener("error",
-  function(e) {
-    responseElem.innerText = "Unable to submit form right now"
-    responseElem.classList.remove("response-complete");
-    responseElem.classList.add("response-error");
-  });
+  http.addEventListener("error", formError);
 
   http.send(FD);
 
   // tell the form to not reload the page
   return false;
+
+  function formSuccess(e){
+    responseElem.innerText = "Thank You. Your message has been sent"
+    thisForm.reset()
+    responseElem.classList.remove("response-error");
+    responseElem.classList.add("response-complete");
+  }
+
+  function formError(e){
+    responseElem.innerText = "Unable to submit form right now"
+    responseElem.classList.remove("response-complete");
+    responseElem.classList.add("response-error");
+  }
+
+  function formFormatError(e){
+    responseElem.innerText = "Please enter a valid email address"
+    responseElem.classList.remove("response-complete");
+    responseElem.classList.add("response-error");
+  }
 }
